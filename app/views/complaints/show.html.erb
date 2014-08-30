@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @complaint.subject %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @complaint.description %>
+</p>
+
+<p>
+  <strong>picture:</strong>
+<%= image_tag(@complaint.picture_url, :width => 600) if @complaint.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>
